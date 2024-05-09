@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Navbar from "@/components/Navbar";
-import { delay, motion, stagger } from "framer-motion";
-
+import Hero from "@/components/Hero";
 function HomePage(props) {
   const variant = {
     visible: (i) => ({
@@ -14,16 +13,24 @@ function HomePage(props) {
   const [open, setOpen] = useState(false);
   const items = ["item1", "item2", "item3", "item4", "item5", "item6"];
   return (
-    <div>
-      <section className="h-screen">
+    <>
+      <section className="h-screen" id="Homepage">
         <Navbar></Navbar>
+        <Hero></Hero>
       </section>
-      <section className="h-screen "></section>
-      <section className="h-screen">Portfolio</section>
-      <section className="h-screen">Portfolio</section>
-      <section className="h-screen">Portfolio</section>
-      <section className="h-screen">Portfolio</section>
-    </div>
+      <section className="h-screen" id="Services">
+        Services
+      </section>
+      <section className="h-screen" id="Portfolio">
+        Portfolio
+      </section>
+      <section className="h-screen" id="Contact">
+        Contact
+      </section>
+      <section className="h-screen" id="About">
+        About
+      </section>
+    </>
   );
 }
 

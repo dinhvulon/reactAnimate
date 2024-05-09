@@ -8,14 +8,17 @@ export default function index() {
   const variant = {
     open: {
       clipPath: "circle(1200px at 50px 50px)",
+      transition: {
+        ease: "linear",
+        duration: 1,
+      },
     },
     closed: {
       clipPath: "circle(30px at 50px 50px)",
       transition: {
-        delay: 0.5,
+        delay: 0.1,
         type: "spring",
-        stiffness: 400,
-        damping: 40,
+        stiffness: 20,
       },
     },
   };
@@ -29,7 +32,7 @@ export default function index() {
         <Links></Links>
       </motion.div>
 
-      <ToggleButton setOpen={setOpen}></ToggleButton>
+      <ToggleButton setOpen={setOpen} open={open}></ToggleButton>
     </div>
   );
 }
